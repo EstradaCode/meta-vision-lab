@@ -9,7 +9,7 @@ public class ProductoMapper {
         p.setNombre(dto.getNombre());
         p.setMarca(dto.getMarca());
         p.setCosto(dto.getCosto());
-        p.setCantidad_disponible(dto.getCantidadDisponible());
+        p.setCantidadDisponible(dto.getCantidadDisponible());
         return p;
     }
 
@@ -17,7 +17,7 @@ public class ProductoMapper {
         producto.setNombre(dto.getNombre());
         producto.setMarca(dto.getMarca());
         producto.setCosto(dto.getCosto());
-        producto.setCantidad_disponible(dto.getCantidadDisponible());
+        producto.setCantidadDisponible(dto.getCantidadDisponible());
     }
 
     public static ProductoResponseDTO toDto(Producto p) {
@@ -26,7 +26,7 @@ public class ProductoMapper {
                 p.getNombre(),
                 p.getMarca(),
                 p.getCosto(),
-                p.getCantidad_disponible()
+                p.getCantidadDisponible()
         );
     }
 }

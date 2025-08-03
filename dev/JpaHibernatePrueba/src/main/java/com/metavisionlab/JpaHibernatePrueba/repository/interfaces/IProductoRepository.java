@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface IProductoRepository extends JpaRepository<Producto,Long> {
     List<Producto> findByCantidadDisponibleLessThan(Double cantidad);
-    void UpdateStock();
+    //void UpdateStock();
 }

@@ -5,6 +5,7 @@ import com.metavisionlab.JpaHibernatePrueba.DTOS.ProductoResponseDTO;
 import com.metavisionlab.JpaHibernatePrueba.DTOS.ProductoUpdateRequestDTO;
 import com.metavisionlab.JpaHibernatePrueba.service.ProductoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,8 +20,10 @@ public class ProductoController {
 
     @PostMapping("/crear")
     public ResponseEntity<ProductoResponseDTO> crear(@RequestBody ProductoCreateRequestDTO dto) {
-        return ResponseEntity.ok(productoService.crearProducto(dto));
+        ProductoResponseDTO creado = productoService.crearProducto(dto);
+        return ResponseEntity.status(HttpStatus.CREATED).body(creado);
     }
+
 
     @GetMapping
     public ResponseEntity<List<ProductoResponseDTO>> listar() {
