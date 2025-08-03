@@ -9,5 +9,5 @@ public interface IVentasService {
     List<Venta> ListadoCompras();
     Venta obtenerVenta(Long id);
     void eliminarVenta(Long id_venta); // debe ir relacionado a un cliente particular
-    void editarVenta(Long id_venta);
+    void editarVenta(Long id_venta, Venta nue);
 }
